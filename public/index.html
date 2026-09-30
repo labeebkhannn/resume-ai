@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResumeAI — AI Resume Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><span class="brand-mark">✦</span>Resume<span>AI</span></a>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#faq">Resources</a>
+    </nav>
+    <div class="account-links"><button class="text-button" id="settingsBtn">⚙ Settings</button><button class="text-button" id="aboutBtn">About</button><button class="login" id="loginBtn">Log in</button><button class="signup" id="signupBtn">Get started</button></div>
+  </header>
+
+  <main id="top">
+    <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR CAREER, CLARIFIED</p>
+        <h1>Make your resume <em>impossible</em> to ignore.</h1>
+        <p class="lead">Get instant, practical feedback that helps your resume pass applicant tracking systems and reach real people.</p>
+        <div class="hero-actions"><a class="primary-button" href="#analyzer">Analyze my resume <span>→</span></a><a class="watch-link" href="#how-it-works">See how it works <b>▶</b></a></div>
+        <p class="trust">✦ Free to try &nbsp; • &nbsp; No credit card required</p>
+      </div>
+      <div class="preview-card" aria-label="Resume analysis preview">
+        <div class="preview-top"><span class="mini-logo">✦ ResumeAI</span><span class="scanning">● ANALYSIS COMPLETE</span></div>
+        <div class="preview-body"><div class="score-panel"><span>ATS SCORE</span><strong>86</strong><small>Great match!</small><div class="progress"><i></i></div><p>+18 points improved</p></div><div class="resume-lines"><span class="line dark w-75"></span><span class="line w-45"></span><span class="label">EXPERIENCE</span><span class="line dark w-90"></span><span class="line w-65"></span><span class="line w-80 highlighted"></span><span class="line w-55"></span><span class="label">SKILLS</span><div class="chips"><b>React</b><b>Strategy</b><b>Leadership</b></div></div></div>
+        <div class="tip"><span>✦</span><div><b>Strong impact statement</b><small>Great use of metrics in your experience.</small></div><strong>+5</strong></div>
+      </div>
+    </section>
+
+    <section class="analyzer" id="analyzer">
+      <div class="section-heading"><p class="eyebrow">RESUME CHECKER</p><h2>Get feedback in <span>seconds.</span></h2><p>Paste your resume below and choose a target role. We’ll highlight your strongest points and the easiest wins.</p></div>
+      <div class="analyzer-card"><div class="form-area"><label for="role">Target role <small>optional</small></label><input id="role" placeholder="e.g. Frontend Developer" /><label for="resumeUpload">Upload your resume</label><input id="resumeUpload" type="file" accept=".txt,.pdf,.doc,.docx" hidden><div class="upload-zone" id="uploadZone" role="button" tabindex="0"><div class="upload-icon">↑</div><div><b>Choose a file</b> or drop it here<small>PDF, DOCX or TXT · Max 5 MB</small></div><span class="browse-file">Browse files</span></div><p class="file-status" id="fileStatus">No file selected — or paste your resume below.</p><label for="resume">Your resume <small>paste text or upload a TXT file</small></label><textarea id="resume" placeholder="Paste your resume text here...\n\nTip: Include your experience, education, skills and achievements for the best feedback."></textarea><div class="form-footer"><span id="wordCount">0 words</span><button id="analyzeBtn" class="primary-button">Analyze resume <span>→</span></button></div></div><aside class="result-panel" id="resultPanel"><div class="empty-result"><span>✦</span><h3>Your insights will appear here</h3><p>Add your resume to receive a personalized ATS score and improvement tips.</p></div></aside></div>
+    </section>
+
+    <section class="features" id="features"><div class="section-heading centered"><p class="eyebrow">ONE RESUME. MORE OPPORTUNITIES.</p><h2>Everything you need to <span>stand out.</span></h2></div><div class="feature-grid"><article><div class="feature-icon mint">⌁</div><h3>Know your ATS score</h3><p>Optimize your resume with the keywords and formatting applicant tracking systems look for, so it gets seen by actual humans.</p><a href="#analyzer">Check your score →</a></article><article><div class="feature-icon peach">✦</div><h3>Show your expertise</h3><p>Improve how you present your experience with focused suggestions that help highlight your most relevant skills.</p><a href="#analyzer">Improve my resume →</a></article><article><div class="feature-icon blue">↗</div><h3>Tailor your resume faster</h3><p>Adapt one resume for multiple roles, so you can tailor every application without starting from scratch.</p><a href="#analyzer">Tailor for a role →</a></article></div></section>
+
+    <section class="how" id="how-it-works"><div><p class="eyebrow">SIMPLE BY DESIGN</p><h2>Better applications start <span>here.</span></h2><p>Less guessing. More confidence in every application you send.</p><div class="how-promise"><span>✦</span><p><b>Your experience stays yours.</b><br>Use insights to tell a clearer career story, not to replace it.</p></div></div><ol><li><b>01</b><div><h3>Add your resume</h3><p>Paste your resume and choose the role you want. Your experience, skills and accomplishments create the starting point.</p><span class="step-tag">Takes less than a minute</span></div></li><li><b>02</b><div><h3>Get clear feedback</h3><p>See an ATS-style score, matched keywords and focused improvements—so you know exactly what to strengthen first.</p><span class="step-tag">Clear, practical insights</span></div></li><li><b>03</b><div><h3>Apply with confidence</h3><p>Refine the details, tailor your strongest points to the role, and send applications that feel like your best work.</p><span class="step-tag">Built for every opportunity</span></div></li></ol></section>
+  </main>
+  <footer id="faq"><a class="brand" href="#top"><span class="brand-mark">✦</span>Resume<span>AI</span></a><p>Built to help you put your best work forward.</p><small>© 2026 ResumeAI. Internship project demo.</small></footer>
+  <div class="modal-backdrop" id="modal"><div class="modal"><button id="closeModal" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "ai-resume-analysis",
+  "version": "1.0.0",
+  "description": "A lightweight AI resume analysis internship project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
