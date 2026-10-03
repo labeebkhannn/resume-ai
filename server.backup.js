@@ -61,7 +61,7 @@ function analyzeResume(text, role) {
 }
 
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json' };
-const handler = (req, res) => {
+http.createServer((req, res) => {
   if (req.method === 'POST' && (req.url === '/api/auth/register' || req.url === '/api/auth/login')) {
     let data = '';
     req.on('data', chunk => data += chunk);
@@ -107,13 +107,4 @@ const handler = (req, res) => {
   }
   res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'text/plain' });
   fs.createReadStream(file).pipe(res);
-};
-
-module.exports = handler;
-
-if (require.main === module) {
-  http.createServer(handler).listen(PORT, () => {
-    console.log('AI Resume Analysis is running at http://localhost:' + PORT);
-  });
-}
-
+}).listen(PORT, () => console.log(`AI Resume Analysis is running at http://localhost:${PORT}`));
